@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mania HitCount and Chart</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="graph-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="grid" id="grid-container">
+            <div class="flex">
+                <div class="left" id="marvtext">marv</div>
+                <div class="right" id="marvcount"></div>
+            </div>
+            <div class="flex">
+                <div class="left" id="perftext">perf</div>
+                <div class="right" id="perfcount"></div>
+            </div>
+            <div class="flex">
+                <div class="left" id="greattext">great</div>
+                <div class="right" id="greatcount"></div>
+            </div>
+            <div class="flex">
+                <div class="left" id="goodtext">good</div>
+                <div class="right" id="goodcount"></div>
+            </div>
+            <div class="flex">
+                <div class="left" id="badtext">bad</div>
+                <div class="right" id="badcount"></div>
+            </div>
+            <div class="flex">
+                <div class="left" id="misstext">miss</div>
+                <div class="right" id="misscount"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./chart.js"></script>
+<script type="module" src="./index.js"></script>
+</html>

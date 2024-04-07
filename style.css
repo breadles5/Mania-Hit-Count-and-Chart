@@ -1,0 +1,59 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    transition: linear 0.5s;
+}
+#graph-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    width:min-content;
+    gap: 5px 50px;
+    margin-top: 15px;
+}
+.flex div {
+    font: bold 20px sans-serif;
+    display: inline;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+  }
+
+#test {
+    font: bold 20px sans-serif;
+    color: red;
+}
+
+#marvtext {
+    color: rgb(136, 198, 255)
+}
+#perftext {
+    color: rgb(255, 255, 0)
+}
+#greattext {
+    color: rgb(0, 255, 0)
+}
+#goodtext {
+    color: rgb(34, 116, 192)
+}
+#badtext {
+    color: rgb(255, 0, 255)
+}
+#misstext {
+    color: rgb(255, 0, 0)
+}
