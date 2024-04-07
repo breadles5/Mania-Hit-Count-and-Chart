@@ -2,5 +2,5 @@ Usecase: obs-overlay
 Name: Mania HitCount and Chart
 Author: Breadles
 CompatibleWith: tosu
-Resolution: 400 x 400
+Resolution: 515 x 300
 authorlinks: https://github.com/breadles5/
