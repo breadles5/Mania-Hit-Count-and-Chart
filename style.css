@@ -1,9 +1,9 @@
 #main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: min-content;
     transition: linear 0.5s;
 }
 
@@ -16,17 +16,15 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
     width: min-content;
-    gap: 5px 50px;
-    margin-top: 15px;
+    margin-left: 15px;
 }
 
 .flex div {
-    font: bold 20px sans-serif;
+    font: bold 32px sans-serif;
     display: inline;
 }
 
@@ -35,7 +33,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
+    width: 200px;
 }
 
 #test {
