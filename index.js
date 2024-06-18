@@ -1,32 +1,34 @@
 import WebSocketManager from "./socket.js"
 const socket = new WebSocketManager('127.0.0.1:24050')
 let hits = []; // initializes hit count array, 
+let state = 0;
 // Store the elements in variables, reducing DOM queries
-const marvcountElement = document.getElementById('marvcount');
-const perfcountElement = document.getElementById('perfcount');
-const greatcountElement = document.getElementById('greatcount');
-const goodcountElement = document.getElementById('goodcount');
-const badcountElement = document.getElementById('badcount');
-const misscountElement = document.getElementById('misscount');
-const mainElement = document.getElementById('main');
+const elements = {
+  marvcount: document.getElementById('marvcount'),
+  perfcount: document.getElementById('perfcount'),
+  greatcount: document.getElementById('greatcount'),
+  goodcount: document.getElementById('goodcount'),
+  badcount: document.getElementById('badcount'),
+  misscount: document.getElementById('misscount'),
+  all: document.querySelector("*"),
+}
 socket.api_v2((data) => {
   try {
     // Clears counter when not playing
-    if (data.state.number !== 2) {
-      mainElement.style.opacity = 0;
-    } else {
-      mainElement.style.opacity = 1;
+    if (state !== data.state.number) {
+      state = data.state.number
+      elements.all.style.opacity = data.state.number !== 2 ? 0 : 1;
     }
 
     // Updates hit counts array
     hits = [data.play.hits.geki, data.play.hits['300'], data.play.hits.katu, data.play.hits['100'], data.play.hits['50'], data.play.hits['0']];
     // Update the innerHTML of the elements
-    marvcountElement.innerHTML = data.play.hits.geki;
-    perfcountElement.innerHTML = data.play.hits['300'];
-    greatcountElement.innerHTML = data.play.hits.katu;
-    goodcountElement.innerHTML = data.play.hits['100'];
-    badcountElement.innerHTML = data.play.hits['50'];
-    misscountElement.innerHTML = data.play.hits['0'];
+    elements.marvcount.innerHTML = data.play.hits.geki || 0;
+    elements.perfcount.innerHTML = data.play.hits['300'] || 0;
+    elements.greatcount.innerHTML = data.play.hits.katu || 0;
+    elements.goodcount.innerHTML = data.play.hits['100'] || 0;
+    elements.badcount.innerHTML = data.play.hits['50'] || 0;
+    elements.misscount.innerHTML = data.play.hits['0'] || 0;
   } catch (err) {
     console.log(err)
   }
