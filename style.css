@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "VisbyRoundCF";
+    src: url(./VisbyRoundCF-Medium.otf) format("opentype");
+}
+
 #main {
     display: flex;
     flex-direction: row;
@@ -24,7 +29,7 @@
 }
 
 .flex div {
-    font: bold 32px sans-serif;
+    font: bold 2.7rem 'VisbyRoundCF';
     display: inline;
 }
 
@@ -34,11 +39,6 @@
     justify-content: space-between;
     align-items: center;
     width: 200px;
-}
-
-#test {
-    font: bold 20px sans-serif;
-    color: red;
 }
 
 #marvtext {
