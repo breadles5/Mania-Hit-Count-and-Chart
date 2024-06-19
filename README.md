@@ -6,7 +6,6 @@ developed for [osu!](https://osu.ppy.sh) mania, but using it in another gamemode
 
 
 # how to install
-1. download .zip
+1. download .zip from [releases](https://github.com/breadles5/mania-hit-count-and-chart/releases/)
 2. unzip to your counters / overlays folder
-3. copy url from tosu dashboard to config.ini or add as a browser source in OBS studio
-4. restart both osu and tosu
+3. copy url from tosu dashboard to config.ini or add as a browser source in OBS studios
