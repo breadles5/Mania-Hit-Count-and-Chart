@@ -10,7 +10,7 @@
     align-items: center;
     width: min-content;
     transition: linear 0.5s;
-    background: rgba(0, 0, 0, 0.6);
+    background: #00000099;
     border-radius: 15px;
     padding: 0px 10px 5px;
 }
@@ -45,27 +45,27 @@
 }
 
 #marvtext {
-    color: rgb(136, 198, 255)
+    color: #88c6ff
 }
 
 #perftext {
-    color: rgb(255, 255, 0)
+    color: #ffff00
 }
 
 #greattext {
-    color: rgb(0, 255, 0)
+    color: #00ff00
 }
 
 #goodtext {
-    color: rgb(34, 116, 192)
+    color: #2274c0
 }
 
 #badtext {
-    color: rgb(255, 0, 255)
+    color: #ff00ff
 }
 
 #misstext {
-    color: rgb(255, 0, 0)
+    color: #ff0000
 }
 
 #marvcount,
