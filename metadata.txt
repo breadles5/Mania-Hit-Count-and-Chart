@@ -3,4 +3,4 @@ Name: Mania HitCount and Chart
 Author: Breadles
 CompatibleWith: tosu
 Resolution: 585 x 313
-authorlinks: https://github.com/breadles5/
+Authorlinks: https://github.com/breadles5/
